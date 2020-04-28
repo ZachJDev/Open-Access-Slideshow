@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 
 const siKey = process.env.DATA_GOV_API_KEY;
 const database = process.env.SLIDESHOW_DATABASE_URL
+const PORT = process.env.PORT || 3000
 mongoose.connect(database, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -86,6 +87,6 @@ function getRandomInt(max) {
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("listening on port 3000");
 });
