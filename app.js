@@ -19,14 +19,14 @@ mongoose.connect(database, {
 // app.use(cors());
 app.use(multer().none());
 
-// app.use(function (req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 app.post("/", (req, res) => {
   let numPics = 10;
@@ -88,5 +88,5 @@ function getRandomInt(max) {
 
 
 app.listen(PORT, () => {
-  console.log(`listening on ${{PORT}}`);
+  console.log(`listening on ${PORT}`);
 });
