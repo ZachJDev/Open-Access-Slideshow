@@ -88,5 +88,5 @@ function getRandomInt(max) {
 
 
 app.listen(PORT, () => {
-  console.log(`listening on ${{PRT}}`);
+  console.log(`listening on ${{PORT}}`);
 });
