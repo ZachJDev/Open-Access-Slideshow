@@ -32,6 +32,8 @@ app.post("/", (req, res) => {
   let imageArray = [];
   let startRow = 0;
 
+  console.log("Request made")
+
   SearchTerm.findOne({ term: req.body.searchTerm }).then((search) => {
     if (!search) search = new SearchTerm({ term: req.body.searchTerm });
     if (search.si > numPics) startRow = getRandomInt(search.si - numPics - 1); // Grab a random starting row that won't go over the number of returned rows
