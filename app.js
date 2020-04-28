@@ -17,7 +17,7 @@ mongoose.connect(database, {
 });
 
 // app.use(cors());
-// app.use(multer().none());
+app.use(multer().none());
 
 // app.use(function (req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
@@ -88,5 +88,5 @@ function getRandomInt(max) {
 
 
 app.listen(PORT, () => {
-  console.log("listening on port 3000");
+  console.log(`listening on ${{PRT}}`);
 });
